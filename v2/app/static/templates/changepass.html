@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Change Password{% endblock %}
+
+{% block content %}
+<header>
+    <h1>Change Password</h1>
+</header>
+<main>
+    <body>
+        <h2>Change Password</h2>
+        <form method="POST">
+            <label>Username:</label>
+            <input type="text" name="username" required><br>
+
+            <label>New Password (10 or more characters):</label>
+            <input type="password" name="NewPass" minlength="10" required><br>
+            <label>Confirm Password:</label>
+            <input type="password" name="ConfPass" minlength="10" required><br>
+            <label>Old Password:</label>
+            <input type="password" name="OldPass" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </body>
+</main>
+{% endblock %}
